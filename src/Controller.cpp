@@ -1,8 +1,11 @@
 #include "Controller.h"
+#include "Player.h"
+#include "Includes.h"
 
 Controller::Controller(int window_Identifier)
 {
     originalwindow=window_Identifier;
+    player = new Player();
 
 }
 
@@ -22,12 +25,14 @@ void Controller::InitDisplay()
 void Controller::Display()
 {
     glClear(GL_COLOR_BUFFER_BIT);
-    glBegin(GL_TRIANGLES);
-    glPointSize(5.0);
-    glVertex2d(0,0);
-    glVertex2d(320,240);
-    glVertex2d(640,0);
-    glEnd();
+    glColor3f(1.0,0.0,0.0);
+    player->Draw();
+    //    glBegin(GL_TRIANGLES);
+//    glPointSize(5.0);
+//    glVertex2d(0,0);
+//    glVertex2d(320,240);
+//    glVertex2d(640,0);
+//    glEnd();
 
 
     glutSwapBuffers();

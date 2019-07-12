@@ -42,10 +42,15 @@ int Game::init(int argc,char**argv)
     glutInit(&argc,argv);
     glutInitDisplayMode(GLUT_DOUBLE|GLUT_RGB);
     glutInitWindowSize(640,480);
-    return glutCreateWindow("Asteroids");
+    return glutCreateWindow("SHOOTING GAME");
 }
 
 Game::~Game()
 {
+    if (controller != 0)
+    {
+        delete controller;
+        controller = 0;
+    }
     //dtor
 }

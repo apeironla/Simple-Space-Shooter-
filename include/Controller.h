@@ -2,6 +2,7 @@
 #define CONTROLLER_H
 
 #include "Includes.h"
+#include "Player.h"
 
 
 class Controller
@@ -20,6 +21,7 @@ private:
 
 
     int originalwindow;
+    Player* player;
 };
 
 #endif // CONTROLLER_H
