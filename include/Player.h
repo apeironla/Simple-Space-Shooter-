@@ -26,7 +26,10 @@ class Player:public GameLoop
         bool left;
         bool right;
 
+
         int last_time;
+
+        int _v;
         POSITION position;
 
 

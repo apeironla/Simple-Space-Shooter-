@@ -19,6 +19,7 @@ void Controller::InitDisplay()
     glLoadIdentity();
     glOrtho(0,640,0,480,-1,1);
     glMatrixMode(GL_MODELVIEW);
+    currentwindow = glutGetWindow();
 
 }
 
@@ -38,10 +39,34 @@ void Controller::Display()
     glutSwapBuffers();
 }
 
+void Controller::SpecialKeyPressed(int key,int x , int y)
+{
+    int time = glutGet(GLUT_ELAPSED_TIME);
+    player->SpecialKeyPressed(key,time);
+
+}
+
+void Controller:: SpecialKeyUpPressed(int key,int x , int y)
+{
+    int time = glutGet(GLUT_ELAPSED_TIME);
+    player->SpecialKeyUpPressed(key);
+
+}
+
+void Controller::Update()
+{
+    int time = glutGet((GLUT_ELAPSED_TIME));
+    player->Update(time);
+
+    //glutPostWindowRedisplay(currentwindow);
+}
+
 void Controller::Initialize()
 {
     InitDisplay();
     glutMainLoop();
+
+
 }
 Controller::~Controller()
 {

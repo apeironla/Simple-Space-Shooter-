@@ -12,6 +12,9 @@ public:
     virtual ~Controller();
     void Initialize();
     void Display();
+    void SpecialKeyPressed(int key,int x, int y);
+    void SpecialKeyUpPressed(int key, int x, int y);
+    void Update();
 
 protected:
 
@@ -21,6 +24,7 @@ private:
 
 
     int originalwindow;
+    int currentwindow;
     Player* player;
 };
 

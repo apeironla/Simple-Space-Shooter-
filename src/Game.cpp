@@ -31,6 +31,10 @@ bool Game::NewGame(int argc, char** argv)
 void Game::InitHandlers()
 {
     glutDisplayFunc(&Game::Display);
+    glutSpecialFunc(&Game::SpecialKeyPressed);
+    glutSpecialUpFunc(&Game::SpecialKeyUpPressed);
+    glutVisibilityFunc(&Game::Visible);
+
 }
 void Game::Display()
 {
@@ -45,6 +49,29 @@ int Game::init(int argc,char**argv)
     return glutCreateWindow("SHOOTING GAME");
 }
 
+void Game:: SpecialKeyPressed(int key, int x, int y)
+{
+    instance->controller->SpecialKeyPressed(key, x,y);
+}
+
+void Game:: SpecialKeyUpPressed(int key, int x, int y)
+{
+    instance->controller->SpecialKeyUpPressed(key, x,y);
+}
+
+void Game:: Update()
+{
+    instance->controller->Update();
+}
+
+void Game:: Visible(int vis)
+{
+    if(vis == GLUT_VISIBLE)
+    {
+        glutIdleFunc(&Game::Update);
+    }
+    else glutIdleFunc(NULL);
+}
 Game::~Game()
 {
     if (controller != 0)

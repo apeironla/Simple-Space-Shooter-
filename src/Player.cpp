@@ -20,11 +20,12 @@ Player::Player()
 
 void Player:: Draw()
 {
-;
+
     glTranslatef(position.x,position.y,0);
     glColor3f(1.0,0.0,0.0);
+    glLineWidth(2);
+    glBegin(GL_LINE_LOOP);
 
-    glBegin(GL_POLYGON);
     glVertex2d(-15,0);
     glVertex2d(35,0);
     glVertex2d(20,20);
@@ -51,8 +52,21 @@ void Player::SpecialKeyPressed(int key, int time)
 
 void Player::Update(int time, int delta)
 {
-    cout<<""<<endl;
+//    cout<<time<<endl;
+    if(left)
+    {
+        delta = time-left_time;
+        left_time= time;
+    }
+
+    _v = delta*.00004;
+    position.x = position.x + _v*delta;
+    position.y = position.y + _v*delta;
+
+
 }
+
+
 void Player::SpecialKeyUpPressed(int key)
 {
     switch(key)

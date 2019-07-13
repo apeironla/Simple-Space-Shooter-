@@ -14,6 +14,10 @@ class Game
         static bool NewGame(int argc , char** argv);
         static void Display();
         static void InitHandlers();
+        static void SpecialKeyPressed(int key , int x, int y);
+        static void SpecialKeyUpPressed(int key, int x, int y);
+        static void Update();
+        static void Visible(int vis);
 
 
 

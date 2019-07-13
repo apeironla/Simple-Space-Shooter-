@@ -1,12 +1,12 @@
 # depslib dependency file v1.0
 1562838106 source:f:\opengl projects 4-2\g\main.cpp
 
-1562958708 source:f:\opengl projects 4-2\g\src\controller.cpp
+1563000835 source:f:\opengl projects 4-2\g\src\controller.cpp
 	"Controller.h"
 	"Player.h"
 	"Includes.h"
 
-1562955094 f:\opengl projects 4-2\g\include\controller.h
+1563005786 f:\opengl projects 4-2\g\include\controller.h
 	"Includes.h"
 	"Player.h"
 
@@ -241,10 +241,10 @@
 	<GL/glu.h>
 	<stdlib.h>
 
-1562956492 source:f:\opengl projects 4-2\g\src\game.cpp
+1563000933 source:f:\opengl projects 4-2\g\src\game.cpp
 	"Game.h"
 
-1562956105 f:\opengl projects 4-2\g\include\game.h
+1563001011 f:\opengl projects 4-2\g\include\game.h
 	"Includes.h"
 	"Controller.h"
 
@@ -257,10 +257,10 @@
 1562957139 f:\opengl projects 4-2\g\include\gameloop.h
 	"Includes.h"
 
-1562959254 source:f:\opengl projects 4-2\g\src\player.cpp
+1563005786 source:f:\opengl projects 4-2\g\src\player.cpp
 	"Player.h"
 
-1562955768 f:\opengl projects 4-2\g\include\player.h
+1563005785 f:\opengl projects 4-2\g\include\player.h
 	"Position.h"
 	"Includes.h"
 	"GameLoop.h"

@@ -49,6 +49,7 @@
 		<Unit filename="include/GameLoop.h" />
 		<Unit filename="include/Includes.h" />
 		<Unit filename="include/Player.h" />
+		<Unit filename="include/Position.h" />
 		<Unit filename="src/Controller.cpp" />
 		<Unit filename="src/Game.cpp" />
 		<Unit filename="src/GameLoop.cpp" />
