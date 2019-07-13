@@ -39,16 +39,27 @@ void Controller::Display()
     glutSwapBuffers();
 }
 
-void Controller::SpecialKeyPressed(int key,int x , int y)
+void Controller::KeyPressed(unsigned char key, int x, int y)
+{
+    int time = glutGet(GLUT_ELAPSED_TIME);
+    switch(key)
+    {
+        case ' ':
+            player->MakeShot(time);
+            break;
+
+    }
+}
+void Controller::SpecialKeyPressed(int key,int x, int y)
 {
     int time = glutGet(GLUT_ELAPSED_TIME);
     player->SpecialKeyPressed(key,time);
 
 }
 
-void Controller:: SpecialKeyUpPressed(int key,int x , int y)
+void Controller:: SpecialKeyUpPressed(int key,int x, int y)
 {
-    int time = glutGet(GLUT_ELAPSED_TIME);
+    //int time = glutGet(GLUT_ELAPSED_TIME);
     player->SpecialKeyUpPressed(key);
 
 }
@@ -58,7 +69,7 @@ void Controller::Update()
     int time = glutGet((GLUT_ELAPSED_TIME));
     player->Update(time);
 
-    //glutPostWindowRedisplay(currentwindow);
+    glutPostWindowRedisplay(currentwindow);
 }
 
 void Controller::Initialize()

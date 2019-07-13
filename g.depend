@@ -1,16 +1,16 @@
 # depslib dependency file v1.0
 1562838106 source:f:\opengl projects 4-2\g\main.cpp
 
-1563000835 source:f:\opengl projects 4-2\g\src\controller.cpp
+1563029112 source:f:\opengl projects 4-2\g\src\controller.cpp
 	"Controller.h"
 	"Player.h"
 	"Includes.h"
 
-1563005786 f:\opengl projects 4-2\g\include\controller.h
+1563028410 f:\opengl projects 4-2\g\include\controller.h
 	"Includes.h"
 	"Player.h"
 
-1562838093 f:\opengl projects 4-2\g\include\includes.h
+1563031077 f:\opengl projects 4-2\g\include\includes.h
 	<iostream>
 	<windows.h>
 	<GL/gl.h>
@@ -241,10 +241,10 @@
 	<GL/glu.h>
 	<stdlib.h>
 
-1563000933 source:f:\opengl projects 4-2\g\src\game.cpp
+1563028812 source:f:\opengl projects 4-2\g\src\game.cpp
 	"Game.h"
 
-1563001011 f:\opengl projects 4-2\g\include\game.h
+1563028676 f:\opengl projects 4-2\g\include\game.h
 	"Includes.h"
 	"Controller.h"
 
@@ -257,13 +257,24 @@
 1562957139 f:\opengl projects 4-2\g\include\gameloop.h
 	"Includes.h"
 
-1563005786 source:f:\opengl projects 4-2\g\src\player.cpp
+1563028710 source:f:\opengl projects 4-2\g\src\player.cpp
 	"Player.h"
 
-1563005785 f:\opengl projects 4-2\g\include\player.h
+1563028964 f:\opengl projects 4-2\g\include\player.h
 	"Position.h"
 	"Includes.h"
 	"GameLoop.h"
+	"Shoot.h"
 
 1562953493 f:\opengl projects 4-2\g\include\position.h
+
+1563031077 f:\opengl projects 4-2\g\include\shoot.h
+	"Includes.h"
+	"GameLoop.h"
+	"Position.h"
+	"Bullet.h"
+	<cmath>
+	<vector>
+
+1563028574 f:\opengl projects 4-2\g\include\bullet.h
 

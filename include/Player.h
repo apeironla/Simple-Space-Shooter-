@@ -4,6 +4,7 @@
 #include "Position.h"
 #include "Includes.h"
 #include "GameLoop.h"
+#include "Shoot.h"
 
 
 class Player:public GameLoop
@@ -16,6 +17,7 @@ class Player:public GameLoop
 
         void SpecialKeyPressed(int key,int time);
         void SpecialKeyUpPressed(int key);
+        void MakeShot(int time);
 
     protected:
 
@@ -31,6 +33,7 @@ class Player:public GameLoop
 
         int _v;
         POSITION position;
+        Shoot* gun;
 
 
 };

@@ -13,6 +13,8 @@ Player::Player()
     position.x = 640/2;
     position.y =0;
 
+    gun = new Shoot();
+
 
 
     //ctor
@@ -20,6 +22,7 @@ Player::Player()
 
 void Player:: Draw()
 {
+    glPushMatrix();
 
     glTranslatef(position.x,position.y,0);
     glColor3f(1.0,0.0,0.0);
@@ -33,7 +36,15 @@ void Player:: Draw()
 
 
     glEnd();
+    glPopMatrix();
 
+    if(gun != 0)gun->Draw();
+
+}
+
+void Player::MakeShot(int time)
+{
+    gun->MakeShot(time,position);
 }
 void Player::SpecialKeyPressed(int key, int time)
 {
@@ -52,16 +63,25 @@ void Player::SpecialKeyPressed(int key, int time)
 
 void Player::Update(int time, int delta)
 {
-//    cout<<time<<endl;
+    cout<<time<<" "<<left_time<<" "<<right_time<<endl;
     if(left)
     {
         delta = time-left_time;
+        position.x = position.x -delta*.08;
         left_time= time;
     }
+    //cout<<position.x<< " "<<position.y<<endl;
+    if(right)
+    {
+        delta = time-right_time;
+        position.x = position.x +delta*.08;
+        right_time= time;
+    }
 
-    _v = delta*.00004;
-    position.x = position.x + _v*delta;
-    position.y = position.y + _v*delta;
+
+    position.y = position.y ;
+
+    if(gun != 0)gun->Update(time,delta);
 
 
 }

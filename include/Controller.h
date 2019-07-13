@@ -12,6 +12,7 @@ public:
     virtual ~Controller();
     void Initialize();
     void Display();
+    void KeyPressed(unsigned char key, int x, int y);
     void SpecialKeyPressed(int key,int x, int y);
     void SpecialKeyUpPressed(int key, int x, int y);
     void Update();

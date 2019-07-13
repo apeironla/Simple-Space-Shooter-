@@ -30,15 +30,22 @@ bool Game::NewGame(int argc, char** argv)
 }
 void Game::InitHandlers()
 {
-    glutDisplayFunc(&Game::Display);
+    glutKeyboardFunc(&Game::KeyPressed);
     glutSpecialFunc(&Game::SpecialKeyPressed);
     glutSpecialUpFunc(&Game::SpecialKeyUpPressed);
+    glutDisplayFunc(&Game::Display);
     glutVisibilityFunc(&Game::Visible);
 
 }
 void Game::Display()
 {
     instance->controller->Display();
+}
+
+void Game::KeyPressed(unsigned char key , int x, int y)
+{
+    instance->controller->KeyPressed(key,x,y);
+
 }
 
 int Game::init(int argc,char**argv)
